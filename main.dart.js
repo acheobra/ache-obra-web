@@ -9731,17 +9731,18 @@ s=1
 break}a=l.z
 a1=a==null?null:B.n.T(a.toLowerCase())
 k=a1==null?"":a1
-a=n.a6("tab_admin_users").bV(0,"id, email, cargo")
+if(J.d(k,"juniorjaskiw@hotmail.com")){q=a6
+s=1
+break}a=n.a6("tab_admin_users").bV(0,"id, email, cargo")
 s=7
 return A.j(A.i_(a.fj(a.fn("email","ilike."+k)),a.$ti.c).da(),$async$Z_)
 case 7:j=b0
-if(j==null){a4=A.E(["dashboard",!1,"config_planos",!1,"premiacao",!1,"selo_verificacao",!1,"usuarios",!1,"administradores",!1,"notificacoes_push",!1],a4,a5)
-q=a4
+if(j==null){q=a6
 s=1
 break}a=J.f(j,"cargo")
 a2=a==null?null:B.n.T(J.a2(a).toLowerCase())
 i=a2==null?"":a2
-if(J.d(k,"juniorjaskiw@hotmail.com")||J.d(i,"master")||J.d(i,"gerente")||J.al(i)===0){q=a6
+if(J.d(i,"master")||J.d(i,"gerente")||J.al(i)===0){q=a6
 s=1
 break}h=J.a2(J.f(j,"id"))
 s=8
