@@ -76528,7 +76528,7 @@ PE(a){return B.e.u(J.t(a==null?"":a).toLowerCase())},
 a0K(a){switch(a){case"pendente":return"Pendente"
 case"aprovado":return"Aprovado"
 case"rejeitado":return"Rejeitado"
-case"correcao":case"solicitado_correcao":return"Corre\xe7\xe3o solicitada"
+case"aguardando_correcao":case"solicitado_correcao":case"correcao":return"Corre\xe7\xe3o solicitada"
 default:return a.length===0?"N\xe3o informado":a}},
 aMp(a){var s=J.dB(a,new A.aTq(this,this.PE(this.e.a.a)))
 s=A.C(s,s.$ti.i("u.E"))
@@ -76728,31 +76728,33 @@ r.l(0,"_historico",q==null?A.b([],t.Y):q)
 return r},
 $S:238}
 A.aTq.prototype={
-$1(a){var s,r,q,p,o,n,m=this.a,l=J.F(a),k=m.PE(l.h(a,"status_aprovacao")),j=m.f,i=!0
-if(j!=="todos")if(k!==j){j=j==="correcao"&&k==="solicitado_correcao"
-i=j}if(!i)return!1
-j=this.b
-if(j.length===0)return!0
-s=l.h(a,"_campanha")
-if(s==null){s=t.z
-s=A.B(s,s)}r=t.N
-q=t.z
-p=A.bt(s,r,q)
-s=l.h(a,"_usuario")
-o=A.bt(s==null?A.B(q,q):s,r,q)
-s=l.h(a,"titulo")
-s=A.d(s==null?"":s)
-q=l.h(a,"descricao")
-q=A.d(q==null?"":q)
-n=l.h(a,"id")
-n=A.d(n==null?"":n)
-l=l.h(a,"campanha_id")
-l=A.b([s,q,n,A.d(l==null?"":l)],t.s)
-s=A.w(p).i("bN<2>")
-B.h.D(l,A.hq(new A.bN(p,s),new A.aTm(),s.i("u.E"),r))
-r=A.w(o).i("bG<1,2>")
-B.h.D(l,new A.dz(new A.X(new A.bG(o,r),new A.aTn(),r.i("X<u.E>")),new A.aTo(),r.i("dz<u.E,i>")))
-return B.h.e3(l,new A.aTp(m,j))},
+$1(a){var s,r,q,p,o,n,m,l=this.a,k=J.F(a),j=l.PE(k.h(a,"status_aprovacao")),i=l.f
+if(i!=="todos")if(i==="correcao"){i=j==="aguardando_correcao"||j==="solicitado_correcao"||j==="correcao"
+s=i}else{i=j===i
+s=i}else s=!0
+if(!s)return!1
+i=this.b
+if(i.length===0)return!0
+r=k.h(a,"_campanha")
+if(r==null){r=t.z
+r=A.B(r,r)}q=t.N
+p=t.z
+o=A.bt(r,q,p)
+r=k.h(a,"_usuario")
+n=A.bt(r==null?A.B(p,p):r,q,p)
+r=k.h(a,"titulo")
+r=A.d(r==null?"":r)
+p=k.h(a,"descricao")
+p=A.d(p==null?"":p)
+m=k.h(a,"id")
+m=A.d(m==null?"":m)
+k=k.h(a,"campanha_id")
+k=A.b([r,p,m,A.d(k==null?"":k)],t.s)
+r=A.w(o).i("bN<2>")
+B.h.D(k,A.hq(new A.bN(o,r),new A.aTm(),r.i("u.E"),q))
+q=A.w(n).i("bG<1,2>")
+B.h.D(k,new A.dz(new A.X(new A.bG(n,q),new A.aTn(),q.i("X<u.E>")),new A.aTo(),q.i("dz<u.E,i>")))
+return B.h.e3(k,new A.aTp(l,i))},
 $S:3}
 A.aTm.prototype={
 $1(a){return A.d(a)},
