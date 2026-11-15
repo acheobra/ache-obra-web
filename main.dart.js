@@ -76545,68 +76545,70 @@ aMp(a){var s=J.dB(a,new A.aTq(this,this.GV(this.e.a.a)))
 s=A.C(s,s.$ti.i("u.E"))
 return s},
 ot(a,b){return this.aJi(a,b)},
-aJi(a6,a7){var s=0,r=A.q(t.H),q=1,p=[],o=this,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5
-var $async$ot=A.m(function(a8,a9){if(a8===1){p.push(a9)
-s=q}for(;;)switch(s){case 0:a0=$.ak()
-a1=new A.aA(B.a8,a0)
-a2=new A.aA(B.a8,a0)
-a3=new A.aA(B.a8,a0)
-a0=o.c
-a0.toString
+aJi(a7,a8){var s=0,r=A.q(t.H),q=1,p=[],o=this,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6
+var $async$ot=A.m(function(a9,b0){if(a9===1){p.push(b0)
+s=q}for(;;)switch(s){case 0:a1=$.ak()
+a2=new A.aA(B.a8,a1)
+a3=new A.aA(B.a8,a1)
+a4=new A.aA(B.a8,a1)
+a1=o.c
+a1.toString
 s=4
-return A.e(A.cJ(null,null,!0,null,new A.aTd(a7,a1,a2,a3),a0,null,!0,t.y),$async$ot)
-case 4:s=a9===!0?2:3
+return A.e(A.cJ(null,null,!0,null,new A.aTd(a8,a2,a3,a4),a1,null,!0,t.y),$async$ot)
+case 4:s=b0===!0?2:3
 break
 case 2:q=6
-if(a7==="correcao"&&B.e.u(a1.a.a).length===0&&B.e.u(a2.a.a).length===0)throw A.h(B.afs)
-s=a7==="aprovado"?9:10
+a1=a8==="correcao"
+if(a1&&B.e.u(a2.a.a).length===0&&B.e.u(a3.a.a).length===0)throw A.h(B.afs)
+s=a8==="aprovado"?9:10
 break
 case 9:s=11
-return A.e(o.d.S("tab_ads_pagamentos").aK(0,"id").a9("campanha_id",J.c(a6,"campanha_id")).a9("status","confirmado"),$async$ot)
-case 11:n=a9
-if(J.eB(n)){a0=A.cg("Esta campanha ainda n\xe3o possui pagamento confirmado. A aprova\xe7\xe3o foi bloqueada.")
-throw A.h(a0)}case 10:a0=o.d
-g=J.F(a6)
+return A.e(o.d.S("tab_ads_pagamentos").aK(0,"id").a9("campanha_id",J.c(a7,"campanha_id")).a9("status","confirmado"),$async$ot)
+case 11:n=b0
+if(J.eB(n)){a1=A.cg("Esta campanha ainda n\xe3o possui pagamento confirmado. A aprova\xe7\xe3o foi bloqueada.")
+throw A.h(a1)}case 10:f=o.d
+e=J.F(a7)
 s=12
-return A.e(a0.S("tab_ads_anuncios").aK(0,"id,status_aprovacao").a9("id",g.h(a6,"id")).cf(),$async$ot)
-case 12:m=a9
-if(m==null){a0=A.cg("An\xfancio n\xe3o encontrado. Atualize a lista.")
-throw A.h(a0)}if(o.GV(J.c(m,"status_aprovacao"))!=="pendente"){o.uI()
-a0=A.cg("Este an\xfancio n\xe3o est\xe1 mais pendente. A lista foi atualizada.")
-throw A.h(a0)}f=a0.gaT().e.a
-f=f==null?null:f.r
-l=f==null?null:f.a
-if(l==null){a0=A.cg("Sess\xe3o administrativa expirada. Entre novamente.")
-throw A.h(a0)}k=null
-switch(a7){case"aprovado":k="aprovado"
+return A.e(f.S("tab_ads_anuncios").aK(0,"id,status_aprovacao").a9("id",e.h(a7,"id")).cf(),$async$ot)
+case 12:m=b0
+if(m==null){a1=A.cg("An\xfancio n\xe3o encontrado. Atualize a lista.")
+throw A.h(a1)}if(o.GV(J.c(m,"status_aprovacao"))!=="pendente"){o.uI()
+a1=A.cg("Este an\xfancio n\xe3o est\xe1 mais pendente. A lista foi atualizada.")
+throw A.h(a1)}d=f.gaT().e.a
+d=d==null?null:d.r
+l=d==null?null:d.a
+if(l==null){a1=A.cg("Sess\xe3o administrativa expirada. Entre novamente.")
+throw A.h(a1)}k=null
+switch(a8){case"aprovado":k="aprovado"
 break
 case"rejeitado":k="rejeitado"
 break
 case"correcao":k="aguardando_correcao"
 break
-default:a0=A.cg("Decis\xe3o administrativa inv\xe1lida.")
-throw A.h(a0)}f=t.z
+default:a1=A.cg("Decis\xe3o administrativa inv\xe1lida.")
+throw A.h(a1)}d=t.z
 s=13
-return A.e(a0.S("tab_ads_anuncios").bi(0,A.I(["status_aprovacao",k,"atualizado_em",new A.ap(Date.now(),0,!1).f9().cT()],f,f)).a9("id",g.h(a6,"id")).a9("status_aprovacao","pendente").aK(0,"id"),$async$ot)
-case 13:j=a9
+return A.e(f.S("tab_ads_anuncios").bi(0,A.I(["status_aprovacao",k,"atualizado_em",new A.ap(Date.now(),0,!1).f9().cT()],d,d)).a9("id",e.h(a7,"id")).a9("status_aprovacao","pendente").aK(0,"id"),$async$ot)
+case 13:j=b0
 if(J.eB(j)){o.uI()
-a0=A.cg("N\xe3o foi poss\xedvel atualizar: o an\xfancio deixou de estar pendente.")
-throw A.h(a0)}e=g.h(a6,"id")
-d=B.e.u(a1.a.a).length===0?null:B.e.u(a1.a.a)
-c=B.e.u(a2.a.a).length===0?null:B.e.u(a2.a.a)
+a1=A.cg("N\xe3o foi poss\xedvel atualizar: o an\xfancio deixou de estar pendente.")
+throw A.h(a1)}i=a1?"correcao_solicitada":a8
+c=e.h(a7,"id")
+a1=B.e.u(a2.a.a).length===0?null:B.e.u(a2.a.a)
 b=B.e.u(a3.a.a).length===0?null:B.e.u(a3.a.a)
-i=A.I(["anuncio_id",e,"administrador_id",l,"decisao",a7,"motivo",d,"orientacao_correcao",c,"observacao",b],t.N,f)
+a=B.e.u(a4.a.a).length===0?null:B.e.u(a4.a.a)
+h=A.I(["anuncio_id",c,"administrador_id",l,"decisao",i,"motivo",a1,"orientacao_correcao",b,"observacao",a],t.N,d)
 q=15
 s=18
-return A.e(a0.S("tab_ads_aprovacoes").dY(0,i),$async$ot)
+return A.e(f.S("tab_ads_aprovacoes").dY(0,h),$async$ot)
 case 18:q=6
 s=17
 break
 case 15:q=14
-a4=p.pop()
+a5=p.pop()
 s=19
-return A.e(a0.S("tab_ads_anuncios").bi(0,A.I(["status_aprovacao","pendente","atualizado_em",new A.ap(Date.now(),0,!1).f9().cT()],f,f)).a9("id",g.h(a6,"id")),$async$ot)
-case 19:throw a4
+return A.e(f.S("tab_ads_anuncios").bi(0,A.I(["status_aprovacao","pendente","atualizado_em",new A.ap(Date.now(),0,!1).f9().cT()],d,d)).a9("id",e.h(a7,"id")),$async$ot)
+case 19:throw a5
 s=17
 break
 case 14:s=6
@@ -76618,23 +76620,23 @@ q=1
 s=8
 break
 case 6:q=5
-a5=p.pop()
-h=A.N(a5)
-o.rC("Falha ao registrar decis\xe3o: "+A.d(h),!0)
+a6=p.pop()
+g=A.N(a6)
+o.rC("Falha ao registrar decis\xe3o: "+A.d(g),!0)
 s=8
 break
 case 5:s=1
 break
-case 8:case 3:a0=a1
-g=$.ak()
-a0.sep(g)
-J.anB(a0,0)
-a0=a2
-a0.sep(g)
-J.anB(a0,0)
-a0=a3
-a0.sep(g)
-J.anB(a0,0)
+case 8:case 3:a1=a2
+f=$.ak()
+a1.sep(f)
+J.anB(a1,0)
+a1=a3
+a1.sep(f)
+J.anB(a1,0)
+a1=a4
+a1.sep(f)
+J.anB(a1,0)
 return A.o(null,r)
 case 1:return A.n(p.at(-1),r)}})
 return A.p($async$ot,r)},
