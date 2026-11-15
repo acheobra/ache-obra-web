@@ -76528,46 +76528,47 @@ PE(a){return B.e.u(J.t(a==null?"":a).toLowerCase())},
 a0K(a){switch(a){case"pendente":return"Pendente"
 case"aprovado":return"Aprovado"
 case"rejeitado":return"Rejeitado"
-case"correcao":case"solicitado_correcao":return"Corre\xe7\xe3o solicitada"
+case"correcao":case"solicitado_correcao":case"correcao_solicitada":case"aguardando_correcao":return"Corre\xe7\xe3o solicitada"
 default:return a.length===0?"N\xe3o informado":a}},
 aMp(a){var s=J.dB(a,new A.aTq(this,this.PE(this.e.a.a)))
 s=A.C(s,s.$ti.i("u.E"))
 return s},
 rn(a,b){return this.aJi(a,b)},
-aJi(a0,a1){var s=0,r=A.q(t.H),q=1,p=[],o=this,n,m,l,k,j,i,h,g,f,e,d,c,b,a
-var $async$rn=A.m(function(a2,a3){if(a2===1){p.push(a3)
-s=q}for(;;)switch(s){case 0:e=$.ak()
-d=new A.aA(B.a8,e)
-c=new A.aA(B.a8,e)
-b=new A.aA(B.a8,e)
-e=o.c
-e.toString
+aJi(a1,a2){var s=0,r=A.q(t.H),q=1,p=[],o=this,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0
+var $async$rn=A.m(function(a3,a4){if(a3===1){p.push(a4)
+s=q}for(;;)switch(s){case 0:d=$.ak()
+c=new A.aA(B.a8,d)
+b=new A.aA(B.a8,d)
+a=new A.aA(B.a8,d)
+d=o.c
+d.toString
 s=4
-return A.e(A.cJ(null,null,!0,null,new A.aTd(a1,d,c,b),e,null,!0,t.y),$async$rn)
-case 4:s=a3===!0?2:3
+return A.e(A.cJ(null,null,!0,null,new A.aTd(a2,c,b,a),d,null,!0,t.y),$async$rn)
+case 4:s=a4===!0?2:3
 break
 case 2:q=6
-s=a1==="aprovado"?9:10
+s=a2==="aprovado"?9:10
 break
 case 9:s=11
-return A.e(o.d.S("tab_ads_pagamentos").aK(0,"id").a9("campanha_id",J.c(a0,"campanha_id")).a9("status","confirmado"),$async$rn)
-case 11:n=a3
-if(J.eK(n)){e=A.cs("Esta campanha ainda n\xe3o possui pagamento confirmado. A aprova\xe7\xe3o foi bloqueada.")
-throw A.h(e)}case 10:e=o.d
-j=e.gaT().e.a
-j=j==null?null:j.r
-m=j==null?null:j.a
-j=t.z
-i=J.F(a0)
+return A.e(o.d.S("tab_ads_pagamentos").aK(0,"id").a9("campanha_id",J.c(a1,"campanha_id")).a9("status","confirmado"),$async$rn)
+case 11:n=a4
+if(J.eK(n)){d=A.cs("Esta campanha ainda n\xe3o possui pagamento confirmado. A aprova\xe7\xe3o foi bloqueada.")
+throw A.h(d)}case 10:d=o.d
+i=d.gaT().e.a
+i=i==null?null:i.r
+m=i==null?null:i.a
+l=a2==="correcao"?"aguardando_correcao":a2
+i=t.z
+h=J.F(a1)
 s=12
-return A.e(e.S("tab_ads_anuncios").bj(0,A.I(["status_aprovacao",a1,"atualizado_em",new A.ap(Date.now(),0,!1).fk().d_()],j,j)).a9("id",i.h(a0,"id")),$async$rn)
-case 12:i=i.h(a0,"id")
-h=B.e.u(d.a.a).length===0?null:B.e.u(d.a.a)
+return A.e(d.S("tab_ads_anuncios").bj(0,A.I(["status_aprovacao",l,"atualizado_em",new A.ap(Date.now(),0,!1).fk().d_()],i,i)).a9("id",h.h(a1,"id")),$async$rn)
+case 12:h=h.h(a1,"id")
 g=B.e.u(c.a.a).length===0?null:B.e.u(c.a.a)
-l=A.I(["anuncio_id",i,"administrador_id",m,"decisao",a1,"motivo",h,"orientacao_correcao",g],t.N,j)
-if(B.e.u(b.a.a).length!==0)J.aF(l,"prazo_correcao",B.e.u(b.a.a))
+f=B.e.u(b.a.a).length===0?null:B.e.u(b.a.a)
+k=A.I(["anuncio_id",h,"administrador_id",m,"decisao",a2,"motivo",g,"orientacao_correcao",f],t.N,i)
+if(B.e.u(a.a.a).length!==0)J.aF(k,"prazo_correcao",B.e.u(a.a.a))
 s=13
-return A.e(e.S("tab_ads_aprovacoes").dX(0,l),$async$rn)
+return A.e(d.S("tab_ads_aprovacoes").dX(0,k),$async$rn)
 case 13:o.PB("Decis\xe3o registrada.")
 o.a.bfy()
 o.AV()
@@ -76575,23 +76576,23 @@ q=1
 s=8
 break
 case 6:q=5
-a=p.pop()
-k=A.N(a)
-o.rC("Falha ao registrar decis\xe3o: "+A.d(k),!0)
+a0=p.pop()
+j=A.N(a0)
+o.rC("Falha ao registrar decis\xe3o: "+A.d(j),!0)
 s=8
 break
 case 5:s=1
 break
-case 8:case 3:e=d
-j=$.ak()
-e.sep(j)
-J.anB(e,0)
-e=c
-e.sep(j)
-J.anB(e,0)
-e=b
-e.sep(j)
-J.anB(e,0)
+case 8:case 3:d=c
+i=$.ak()
+d.sep(i)
+J.anB(d,0)
+d=b
+d.sep(i)
+J.anB(d,0)
+d=a
+d.sep(i)
+J.anB(d,0)
 return A.o(null,r)
 case 1:return A.n(p.at(-1),r)}})
 return A.p($async$rn,r)},
@@ -76726,7 +76727,8 @@ return r},
 $S:238}
 A.aTq.prototype={
 $1(a){var s,r,q,p,o,n,m=this.a,l=J.F(a),k=m.PE(l.h(a,"status_aprovacao")),j=m.f,i=!0
-if(j!=="todos")if(k!==j){j=j==="correcao"&&k==="solicitado_correcao"
+if(j!=="todos")if(k!==j){if(j==="correcao")j=k==="aguardando_correcao"||k==="solicitado_correcao"||k==="correcao_solicitada"||k==="correcao"
+else j=!1
 i=j}if(!i)return!1
 j=this.b
 if(j.length===0)return!0
